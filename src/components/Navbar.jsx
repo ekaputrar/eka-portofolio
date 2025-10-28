@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaPaperPlane } from 'react-icons/fa'; // ikon untuk tombol Hire Me
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +8,10 @@ const Navbar = () => {
     <nav className="bg-white shadow fixed top-0 left-0 w-full z-50">
       <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
         {/* Logo */}
-        <a href="#hero" className="text-xl font-bold text-[#333333] font-poppins hover:text-[#6C63FF] transition">
+        <a
+          href="#hero"
+          className="text-xl font-bold text-[#333333] font-poppins hover:text-[#6C63FF] transition"
+        >
           MyProfile
         </a>
 
@@ -22,8 +26,9 @@ const Navbar = () => {
         {/* Hire Me Button (Desktop) */}
         <a
           href="#contact"
-          className="bg-[#6C63FF] text-white px-4 py-2 rounded hidden md:inline hover:bg-[#4C5BFE] transition"
+          className="hidden md:inline-flex items-center gap-2 bg-[#6C63FF] text-white px-4 py-2 rounded hover:bg-[#4C5BFE] transition font-medium shadow-sm"
         >
+          <FaPaperPlane className="text-sm" />
           Hire Me
         </a>
 
@@ -32,7 +37,7 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-[#333333] text-2xl focus:outline-none"
         >
-          {isOpen ? "✕" : "☰"}
+          {isOpen ? '✕' : '☰'}
         </button>
       </div>
 
@@ -47,8 +52,9 @@ const Navbar = () => {
             <a
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="bg-[#6C63FF] text-white px-4 py-2 rounded hover:bg-[#4C5BFE] transition"
+              className="inline-flex items-center gap-2 bg-[#6C63FF] text-white px-4 py-2 rounded hover:bg-[#4C5BFE] transition font-medium shadow-sm"
             >
+              <FaPaperPlane className="text-sm" />
               Hire Me
             </a>
           </li>

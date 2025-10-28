@@ -4,17 +4,6 @@ Project ini merupakan implementasi slicing desain Figma ke React.js dengan Tailw
 
 ---
 
-## ✨ Features
-
-- 🎨 Clean and responsive layout based on Figma mockup  
-- ⚡ Built with React + Tailwind CSS  
-- 📱 Mobile-first design  
-- 🧩 Modular components for maintainability  
-- 📷 Optimized image loading  
-- 💌 Contact form with social media integration  
-
----
-
 ## 📁 Project Structure
 src/
 ├── assets/
@@ -44,35 +33,12 @@ src/
 
 ---
 
-## 📬 Contact
-
-Feel free to reach out or collaborate!
-
-- 📧 Email: [andynaaaulia@gmail.com]
-- 📱 Phone: +62 878-7919-5912  
-
----
-
 ## 🖼️ Preview
  
-### 🖥️ Desktop View
-![Desktop View](src/assets/dokumentasi/view-desktop.jpeg)
+### Desktop View
+![Desktop View](src/assets/dokumentasi/DesktopWebs/Tangkapan%20Layar%202025-10-28%20pukul%2022.49.25.png)
 
-### 📱 Mobile View
-![Mobile View](src/assets/dokumentasi/view-mobile.jpg)
-
-### 🔍 Mobile Navbar Focus
-![Navbar Focus](src/assets/dokumentasi/view-mobile-navbar-focus.jpg)
----
-
-## ⚠️ Catatan
-
-Project ini dimulai dari template mentor (**Zaki Maliki**) dan telah diinisialisasi ulang karena error pada konfigurasi Tailwind CSS. Semua struktur, komponen, dan desain telah dimodifikasi sesuai instruksi tugas dan referensi Figma yang dipilih.
+### Mobile View
+![Mobile View](src/assets/dokumentasi/MobileWebs/Tangkapan%20Layar%202025-10-28%20pukul%2023.11.13.png)
 
 ---
-
-## 🧠 Credits
-
-Built with ❤️ by **Andyna Aulia Azzahra**  
-Based in **Jakarta**  
-© 2025
