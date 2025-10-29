@@ -43,7 +43,7 @@ const AboutSection = () => {
                 key={index}
                 className="bg-[#EAE6FF] text-[#6C63FF] px-4 py-2 rounded-full text-sm font-medium shadow-sm border border-[#D6E4FF]/50"
               >
-                ✅ {skill}
+                 {skill}
               </span>
             ))}
           </div>
