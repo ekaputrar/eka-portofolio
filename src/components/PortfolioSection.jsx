@@ -37,7 +37,7 @@ const PortfolioSection = () => {
       <div className="max-w-6xl mx-auto px-6 relative">
         {/* Title */}
         <h2 className="text-3xl font-bold text-[#1F2937] mb-12 flex items-center justify-center gap-2 text-center font-poppins">
-          📁 Portfolio
+          Portfolio
         </h2>
 
         {/* Project Cards */}
@@ -78,7 +78,7 @@ const PortfolioSection = () => {
             rel="noopener noreferrer"
             className="bg-[#6C63FF] text-white px-6 py-2 rounded-full hover:bg-[#4C5BFE] transition font-medium shadow-md"
           >
-            👁️‍🗨️ More on Dribbble
+            More on Dribbble
           </a>
         </div>
       </div>

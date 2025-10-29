@@ -19,7 +19,7 @@ const SkillsSection = () => {
 
       <div className="max-w-6xl mx-auto px-6 text-center relative">
         <h2 className="text-3xl font-bold text-[#1F2937] mb-10 flex items-center gap-2 justify-center font-poppins">
-          💡 My Skills
+          My Skills
         </h2>
 
         <div className="flex flex-col md:flex-row justify-center gap-6 flex-wrap">
