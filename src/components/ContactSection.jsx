@@ -1,108 +1,121 @@
-import React from 'react';
-import { FaInstagram, FaGithub, FaDribbble, FaLinkedin } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const ContactSection = () => {
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSent(true);
+    setTimeout(() => setSent(false), 3000);
+    e.target.reset();
+  };
+
   return (
     <section
       id="contact"
-      className="relative pt-28 pb-20 bg-gradient-to-br from-[#F9FAFF] via-[#FFFFFF] to-[#EAE6FF] overflow-hidden"
+      className="relative py-28 bg-gradient-to-br from-indigo-50 via-white to-purple-100 overflow-hidden"
     >
-      {/* Dekorasi Blur */}
-      <div className="absolute top-10 left-10 w-40 h-40 bg-[#C7D2FE] rounded-full blur-3xl opacity-30 -z-10"></div>
-      <div className="absolute bottom-10 right-20 w-48 h-48 bg-[#E9D5FF] rounded-full blur-3xl opacity-30 -z-10"></div>
+      {/* Glow */}
+      <div className="absolute -top-24 -left-24 w-80 h-80 bg-indigo-300 rounded-full blur-3xl opacity-30" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-300 rounded-full blur-3xl opacity-30" />
 
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative">
-        {/* Kiri: Info Kontak */}
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center relative">
+        {/* Info */}
         <div>
-          <h2 className="text-3xl font-bold text-[#1F2937] mb-4 font-poppins">📬 Contact Me</h2>
-          <p className="text-gray-700 mb-6 leading-relaxed">
-            Interested in working together? Let’s connect and create something amazing!
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            📬 Contact Me
+          </h2>
+          <p className="text-gray-600 mb-8 leading-relaxed">
+            Interested in working together or have a question?  
+            Feel free to reach out anytime.
           </p>
 
-          <div className="space-y-4 text-[#6C63FF] font-medium">
-            <div className="flex items-center gap-3">
-              <span>📧</span>
-              <a href="mailto:eka32686@gmail.com" className="hover:underline">
-                eka32686@gmail.com
-              </a>
-            </div>
-            <div className="flex items-center gap-3">
-              <span>📞</span>
-              <a href="tel:+6281357583303" className="hover:underline">
-                +62 813-5758-3303
-              </a>
-            </div>
+          <div className="space-y-3 text-indigo-600 font-medium">
+            <p>📧 eka32686@gmail.com</p>
+            <p>📞 +62 813-5758-3303</p>
           </div>
 
-          {/* Ikon Sosial */}
-          <div className="flex gap-4 mt-6 text-2xl">
+          {/* Social Media */}
+          <div className="flex gap-4 mt-8 text-2xl">
             <a
-              href="https://instagram.com/"
+              href="https://www.instagram.com/ekaptrrdni"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#6C63FF] hover:bg-pink-100 hover:text-pink-500 p-3 rounded-full transition"
+              className="p-3 bg-white rounded-full shadow-md transition transform hover:scale-110 hover:text-pink-500"
+              aria-label="Instagram"
             >
               <FaInstagram />
             </a>
+
             <a
-              href="https://github.com/"
+              href="https://linkedin.com/in/eka-putra-rahmadani-333088362"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#6C63FF] hover:bg-gray-100 hover:text-gray-800 p-3 rounded-full transition"
+              className="p-3 bg-white rounded-full shadow-md transition transform hover:scale-110 hover:text-gray-800"
+              aria-label="GitHub"
             >
               <FaGithub />
             </a>
+
             <a
-              href="https://dribbble.com/"
+              href="https://www.linkedin.com/in/USERNAME_LINKEDIN_KAMU"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#6C63FF] hover:bg-pink-50 hover:text-[#ea4c89] p-3 rounded-full transition"
-            >
-              <FaDribbble />
-            </a>
-            <a
-              href="https://linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#6C63FF] hover:bg-blue-50 hover:text-blue-600 p-3 rounded-full transition"
+              className="p-3 bg-white rounded-full shadow-md transition transform hover:scale-110 hover:text-blue-600"
+              aria-label="LinkedIn"
             >
               <FaLinkedin />
             </a>
           </div>
         </div>
 
-        {/* Kanan: Form Kontak */}
-        <form className="bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-md border border-white/60 space-y-4 transition-all">
+        {/* Form */}
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white/90 backdrop-blur-xl p-8 rounded-3xl shadow-xl space-y-5"
+        >
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+            <label className="text-sm font-medium text-gray-700">Name</label>
             <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#6C63FF] transition"
+              required
+              className="w-full mt-1 px-4 py-3 rounded-xl border focus:ring-2 focus:ring-indigo-500 outline-none"
+              placeholder="Your name"
             />
           </div>
+
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <label className="text-sm font-medium text-gray-700">Email</label>
             <input
               type="email"
+              required
+              className="w-full mt-1 px-4 py-3 rounded-xl border focus:ring-2 focus:ring-indigo-500 outline-none"
               placeholder="you@email.com"
-              className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#6C63FF] transition"
             />
           </div>
+
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+            <label className="text-sm font-medium text-gray-700">Message</label>
             <textarea
               rows="4"
+              required
+              className="w-full mt-1 px-4 py-3 rounded-xl border focus:ring-2 focus:ring-indigo-500 outline-none"
               placeholder="Type your message..."
-              className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#6C63FF] transition"
-            ></textarea>
+            />
           </div>
+
           <button
             type="submit"
-            className="bg-[#6C63FF] text-white px-6 py-2 rounded-full hover:bg-[#4C5BFE] hover:shadow-md transition font-medium"
+            className="w-full py-3 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition"
           >
             ✉️ Send Message
           </button>
+
+          {sent && (
+            <p className="text-center text-green-600 font-medium">
+              ✅ Message sent successfully!
+            </p>
+          )}
         </form>
       </div>
     </section>

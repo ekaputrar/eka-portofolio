@@ -32,13 +32,3 @@ src/
 - **React Icons** — For social and skill icons  
 
 ---
-
-## 🖼️ Preview
- 
-### Desktop View
-![Desktop View](src/assets/dokumentasi/DesktopWebs/Tangkapan%20Layar%202025-10-28%20pukul%2022.49.25.png)
-
-### Mobile View
-![Mobile View](src/assets/dokumentasi/MobileWebs/Tangkapan%20Layar%202025-10-28%20pukul%2023.11.13.png)
-
----
